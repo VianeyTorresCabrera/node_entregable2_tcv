@@ -21,7 +21,7 @@ const getOne = catchError(async (req, res)=>{
 const destroy = catchError(async (req,res)=>{
     const {id} = req.params
     const result = await User.destroy({where:{id}})
-    if(!result) return res.status(404).json(`car ${id} not found`)
+    if(!result) return res.status(404).json(`user ${id} not found`)
         return res.sendStatus(204)
 });
 
@@ -40,7 +40,6 @@ module.exports = {
     create,
     getOne,
     destroy,
-    update
 }
 
 
