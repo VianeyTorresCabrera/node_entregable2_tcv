@@ -40,6 +40,7 @@ module.exports = {
     create,
     getOne,
     destroy,
+    update
 }
 
 
